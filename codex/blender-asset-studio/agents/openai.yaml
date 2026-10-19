@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender Asset Studio"
+  short_description: "3D assets: references, concepts, visual review"
+  default_prompt: "Use $blender-asset-studio to clarify the brief and references, offer an Imagegen concept, then build the model through Blender MCP with autonomous visual review and separate export verification."

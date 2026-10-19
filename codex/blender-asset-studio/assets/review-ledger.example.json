@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "example_only": true,
+  "asset_id": "example_canopy",
+  "stage": "construction",
+  "candidate_revision": "r02",
+  "best_checkpoint": "checkpoints/r01.blend",
+  "budget": {
+    "complete_cycles": {
+      "limit": 4,
+      "used": 1
+    },
+    "targeted_passes": {
+      "limit": 2,
+      "used": 0
+    },
+    "supporting_generations": {
+      "limit": 3,
+      "used": 0
+    },
+    "initial_concept_generations": {
+      "limit": 2,
+      "used": 0,
+      "applicable": false
+    }
+  },
+  "coverage": [
+    {
+      "region": "roof_profile",
+      "view": "right",
+      "status": "inspected",
+      "evidence": "review/r02/right.png",
+      "reference_observation": "The lip is visually about twice as thick in the calibrated side profile.",
+      "candidate_observation": "The continuous lip has the correct outline but measures only 18 mm thick.",
+      "difference_or_pass_reason": "Increase thickness while preserving the outer contour.",
+      "repair_ids": [
+        "D001"
+      ],
+      "comparison_kind": "target-to-candidate",
+      "target_role": "primary shape reference"
+    },
+    {
+      "region": "rear_connections",
+      "view": "rear",
+      "status": "needs-view",
+      "evidence": null,
+      "reference_observation": "Not visible in the primary reference; assess against the recorded inferred construction.",
+      "candidate_observation": null,
+      "difference_or_pass_reason": null,
+      "repair_ids": [],
+      "comparison_kind": "target-to-candidate",
+      "target_role": "inferred construction"
+    },
+    {
+      "region": "whole_object_finish",
+      "view": "three_quarter_neutral",
+      "status": "inspected",
+      "comparison_kind": "target-to-candidate",
+      "target_role": "quality benchmark",
+      "target_evidence": "references/finish_example.png",
+      "evidence": "review/r02/three_quarter_neutral.png",
+      "reference_observation": "The selected finish has controlled broad sheen and localized dullness around exposed joins.",
+      "candidate_observation": "The current panel is a uniform flat gray; edges and joins have identical response.",
+      "difference_or_pass_reason": "A successful silhouette does not establish surface quality. Repair the material pilot before expanding the asset.",
+      "repair_ids": [
+        "D002"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "D001",
+      "severity": "major",
+      "region": "roof_profile",
+      "object": "roof_panel",
+      "reference_evidence": "references/primary.png, roof edge",
+      "candidate_evidence": "review/r02/right.png",
+      "basis": "measured current thickness; target estimated from reference proportions",
+      "current": {
+        "thickness_m": 0.018
+      },
+      "target": {
+        "thickness_m": 0.036,
+        "tolerance_m": 0.002
+      },
+      "operation": "Move the lower shell 0.018 m along local -Z, holding the upper surface fixed.",
+      "preserve": [
+        "roof pitch",
+        "eave outline",
+        "upper attachment plane"
+      ],
+      "verification": "Measure shell thickness and inspect new right-side/profile crops at matched scale.",
+      "status": "planned",
+      "verified_revision": null,
+      "verification_evidence": [],
+      "attempts_without_improvement": 0
+    },
+    {
+      "id": "D002",
+      "severity": "major",
+      "region": "whole_object_finish",
+      "object": "roof_panel material",
+      "reference_evidence": "references/finish_example.png, painted panel and join",
+      "candidate_evidence": "review/r02/three_quarter_neutral.png",
+      "basis": "Visual comparison; shader targets are an artistic test hypothesis, not sampled albedo",
+      "current": {
+        "roughness": 0.9,
+        "variation": "none"
+      },
+      "target": {
+        "base_roughness": 0.55,
+        "local_join_roughness": 0.85,
+        "mask_extent": "confined to exposed seams and contact zones identified in the reference"
+      },
+      "operation": "Use a localized roughness mask with the given endpoints; keep palette and geometry unchanged. Test the panel under neutral and intended lighting before applying to the whole asset.",
+      "preserve": [
+        "selected clean/maintained condition",
+        "base color",
+        "roof silhouette"
+      ],
+      "verification": "Fresh paired benchmark/current crops must show controlled sheen and locally dull joins without a plastic hotspot. Numeric settings alone do not pass.",
+      "status": "planned",
+      "verified_revision": null,
+      "verification_evidence": [],
+      "attempts_without_improvement": 0
+    }
+  ],
+  "acceptance": {
+    "artistic": "failed",
+    "source": "not-verified",
+    "export": "not-verified",
+    "application": "not-applicable",
+    "direction": "resolved",
+    "export_fidelity": "not-verified"
+  },
+  "stop_reason": null,
+  "intake": {
+    "reference_status": {
+      "state": "answered",
+      "value": "supplied",
+      "evidence": "User selected the provided canopy images."
+    },
+    "initial_art": {
+      "state": "answered",
+      "route": "existing_references",
+      "evidence": "User requested faithful modeling from the supplied design; no concept redesign."
+    },
+    "condition": {
+      "state": "answered",
+      "value": "maintained painted structure",
+      "evidence": "Task brief."
+    }
+  },
+  "visual_target": {
+    "design_reference": "references/primary.png",
+    "quality_benchmark": "references/finish_example.png",
+    "authority": "user-selected references",
+    "success_criteria": [
+      "Roof profile and support contacts match the chosen shape.",
+      "Painted surface and exposed edges have the controlled response seen in the finish example."
+    ],
+    "visibility_priorities": {
+      "focal": [
+        "roof profile",
+        "upper finish"
+      ],
+      "hidden": [
+        "closed internal cavities"
+      ]
+    },
+    "pilot": {
+      "region": "roof edge and adjacent painted panel",
+      "status": "failed",
+      "issues": [
+        "D001",
+        "D002"
+      ]
+    }
+  },
+  "pass_history": [
+    {
+      "candidate_revision": "r02",
+      "review_evidence": [
+        "review/r02/right.png",
+        "review/r02/three_quarter_neutral.png"
+      ],
+      "decision": "repair_required",
+      "open_major_issues": [
+        "D001",
+        "D002"
+      ],
+      "written_when": "at review, before repair"
+    }
+  ]
+}
