@@ -8,13 +8,33 @@ Read project guidance, existing briefs, style examples, models, texture librarie
 
 Keep a small intake table: topic → explicit answer/source → unresolved choice → next action. Distinguish **answered**, **pending**, **explicitly delegated** and **not applicable**. Confirmation of dimensions does not confirm a reference choice, damage level or permission to generate a concept.
 
+## Required opening question: intended use
+
+At the start of a modeling or refinement task, explicitly ask in the user's language: **"How and where will this model be used? What will the viewer or user be able to do with it, and from which sides will it be seen?"** Include two short, relevant example answers so the user understands the kind of context needed. Choose from these or adapt them to the asset:
+
+- **Building:** "A background exterior, never entered" versus "An explorable building with an interior and opening doors."
+- **Vehicle:** "Driven normally; the underside is never visible" versus "May overturn and remain upside down, exposing the underside."
+- **Weapon:** "Carried by distant enemies" versus "Inspected close up in a weapon rack or a rotating selection-menu view, with moving parts shown."
+
+Reuse an explicit answer already present in the request or accepted brief instead of asking again; record its source. An asset category, genre, engine name or size alone is not an intended-use answer. If the user explicitly delegates this choice, record the selected scenario and its assumptions. For a narrow edit, preserve an established use contract and reopen only affected states. An export-only task does not need a new modeling interview.
+
+Translate the answer into a **use contract** before substantial modeling:
+
+- Placement/context, user interaction and closest relevant view, including gameplay, display or menu views when applicable.
+- Required visible sides/interiors and states: normal use, opening, lifting, overturning, damage, disassembly or other stated actions; note explicit exclusions.
+- A visibility/detail plan for those views and states: where geometry and texture detail matter and what can safely be simplified while preserving silhouette, shadows, reflections and function.
+- Static versus separate/moving parts; required pivots, articulation/deformation and operating clearance. Plan these before detailing, but do not invent mechanisms or require rigging for a static asset.
+
+If the reply is too broad to decide a consequential interior, underside or motion requirement, ask a targeted follow-up with concrete alternatives. Continue independent preparation while it is pending; do not assume such a requirement is absent or simplify away geometry needed by an unresolved use. Review the final source and export in the agreed views and required states.
+
 ## First exchange for a new design
 
 Normally ask one compact batch of 4–6 nonredundant questions. Ask fewer when actual prior answers cover the topics; do not pad the count. Cover these decisions, adapting examples to the task:
 
 | Topic | What the question must resolve |
 |---|---|
-| Subject and function | What is being made, how it is used, key dimensions, compatibility, variants and required states. |
+| Intended use (required) | Ask the opening question above with relevant example answers; resolve placement, interaction, visible sides and required states before detail/simplification or motion decisions. |
+| Subject and function | What is being made, key dimensions, compatibility and variants. |
 | User references and examples | Explicitly ask for images, links or existing assets and what the user likes about them: form, material, condition, detail or overall quality. “You may attach something if you want” buried after a size question is insufficient. |
 | Character and condition | New/maintained/aged/damaged, extent and location of damage, repairs, asymmetry, period or style where unresolved. A genre does not define the exact amount of damage. |
 | Viewing priorities | Closest view and screen size/FOV, allowed elevations/azimuths, important and hidden sides, focal details, ground/embed/mounting surface. Resolve whether opening, lifting, flipping, entering or destruction exposes concealed parts. Reuse established camera/state facts rather than asking again. |
@@ -37,7 +57,7 @@ For a complete brief or a narrow edit to an approved asset, reuse the existing d
 
 Proceed when these are resolved, not merely written down as agent assumptions:
 
-1. Function, protected features and significant compatibility dimensions.
+1. Intended-use contract (explicit answer or explicit delegation), function, protected features and significant compatibility dimensions; include visibility and separate/moving-part implications.
 2. References supplied, explicitly absent, or an existing accepted reference set selected.
 3. Initial-art route and review/autonomy choice.
 4. Visual target: selected references/concept, or an explicitly delegated provisional design plus a stated quality benchmark.

@@ -12,6 +12,7 @@ Applies to props, vehicles, buildings, characters and asset families. Not for: a
 ## Non-negotiable rules
 
 - Preserve the user's scope, primary references and protected features. Explicit user/project rules override the fallback choices here.
+- At the start of modeling/refinement, resolve how and where the asset will be used. Ask the required opening question with relevant example answers unless the request or accepted brief already explicitly answers it; record the use contract before choosing detail, simplification or moving parts.
 - Look at actual pixels: references, and fresh renders of the current model. A filename, a summary or your own description of what you built is not visual evidence.
 - Separate maker and reviewer. A script that ran, a low triangle count or a confident narrative never passes the visual gate.
 - Artistic quality is judged against the visual target. Export fidelity is judged against the source. A perfect export of a weak model is still a weak model.
@@ -43,11 +44,31 @@ If Blender MCP is not reachable, finish the brief/reference work and say the mod
 
 Read what's already available: the user's message, attachments, earlier answers, existing files and assets in the scene. Then ask one compact batch of only the questions that are actually open (usually 2-5). Never ask what was already answered; never pad the count.
 
+### Required opening question: intended use
+
+At the start of a modeling or refinement task, explicitly ask in the user's language: **"How and where will this model be used? What will the viewer or user be able to do with it, and from which sides will it be seen?"** Include two short, relevant example answers so the user understands the kind of context needed. Choose from these or adapt them to the asset:
+
+- **Building:** "A background exterior, never entered" versus "An explorable building with an interior and opening doors."
+- **Vehicle:** "Driven normally; the underside is never visible" versus "May overturn and remain upside down, exposing the underside."
+- **Weapon:** "Carried by distant enemies" versus "Inspected close up in a weapon rack or a rotating selection-menu view, with moving parts shown."
+
+Reuse an explicit answer already present in the request or accepted brief instead of asking again; record its source. An asset category, genre, engine name or size alone is not an intended-use answer. If the user explicitly delegates this choice, record the selected scenario and its assumptions. For a narrow edit, preserve an established use contract and reopen only affected states. An export-only task does not need a new modeling interview.
+
+Translate the answer into a **use contract** before substantial modeling:
+
+- Placement/context, user interaction and closest relevant view, including gameplay, display or menu views when applicable.
+- Required visible sides/interiors and states: normal use, opening, lifting, overturning, damage, disassembly or other stated actions; note explicit exclusions.
+- A visibility/detail plan for those views and states: where geometry and texture detail matter and what can safely be simplified while preserving silhouette, shadows, reflections and function.
+- Static versus separate/moving parts; required pivots, articulation/deformation and operating clearance. Plan these before detailing, but do not invent mechanisms or require rigging for a static asset.
+
+If the reply is too broad to decide a consequential interior, underside or motion requirement, ask a targeted follow-up with concrete alternatives. Continue independent preparation while it is pending; do not assume such a requirement is absent or simplify away geometry needed by an unresolved use. Review the final source and export in the agreed views and required states.
+
 Topics the brief must resolve:
 
 | Topic | Must resolve |
 |---|---|
-| Subject and function | What it is, how it's used, key dimensions, variants, moving parts/states. |
+| Intended use (required) | Ask the opening question above with relevant examples; record placement, interaction, exposed sides/interiors and states, and their detail/simplification and moving-part implications. |
+| Subject and function | What it is, key dimensions and variants. |
 | References | Explicitly ask for 1-3 examples and what to take from each: form, materials, condition, overall quality. "No examples" is a valid answer; record it. |
 | Style and condition | Stylized/realistic; new, maintained, aged, damaged; where and how much. A genre word does not define the amount of damage. |
 | Viewing and use | Closest camera distance and screen size; allowed camera range (can it ever be seen from below, from behind, from inside?); does it stand on ground, set into it or mount on something; can it move, open, tip over, be entered or destroyed. These answers decide what may be simplified or removed. Which other objects it touches or is used with (wall, table, terrain, a character), and which poses/states must work. |
@@ -63,6 +84,7 @@ If the user says "decide yourself", record the delegation and proceed. If the re
 Write the brief once (keep it in the work folder, see section 3):
 
 - Asset ID, purpose, deliverables.
+- Intended-use answer/source or explicit delegation; use contract with placement, interaction, closest views, required/excluded visible sides/interiors/states, detail/simplification plan and static/separate/moving-part requirements.
 - References with roles (primary shape / material / condition / quality benchmark / scale) and what must NOT transfer from each.
 - Visual target and quality benchmark (see section 2).
 - 3-6 observable success criteria and the main ways a simplistic result would fail.

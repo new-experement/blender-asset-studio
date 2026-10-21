@@ -3,6 +3,8 @@
 Replace prompts with task facts; omit inapplicable sections. Reuse the project's brief instead when one exists.
 
 - Asset ID, purpose, scope and output directory:
+- Intended use: explicit user answer/source or explicit delegation; placement, interaction and closest relevant viewing context:
+- Use contract: required and excluded sides/interiors/states; derived detail/simplification choices; static/separate/moving parts, pivots, deformation and clearance needs:
 - User language and current request:
 - Source model, if any; protected files/collections:
 - Primary shape reference; material/style references; authoritative order:

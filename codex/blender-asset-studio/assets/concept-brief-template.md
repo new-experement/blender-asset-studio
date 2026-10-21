@@ -3,6 +3,7 @@
 Use only when the initial-art route was selected. Fill from the task; do not retain an example project's style or dimensions.
 
 - Asset/function and variants:
+- Intended-use contract: placement, interaction, closest views, exposed sides/interiors, required states and moving-part requirements:
 - User's initial-art choice and evidence:
 - Selection mode: user review / delegated to agent:
 - Source images and role of each; features explicitly excluded:

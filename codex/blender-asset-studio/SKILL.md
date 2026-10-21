@@ -2,7 +2,7 @@
 name: blender-asset-studio
 description: Create or refine editable 3D assets through Blender MCP with reference intake, an optional initial Imagegen concept, autonomous modeling, and bounded visual acceptance against a selected quality target. Use for reference-matched props, vehicles, buildings, characters, asset families, or high-quality/AAA-like asset work with detailed self-review. Includes precise repairs, project-aware budgets, and separate export verification. Do not use for a concept image alone, ordinary engine programming, or a trivial export that needs no modeling review.
 metadata:
-  version: "1.3.0"
+  version: "1.3.1"
 ---
 
 # Blender Asset Studio
@@ -30,6 +30,7 @@ Reuse an existing task brief and ledger. The [working brief](assets/brief-templa
 
 - Preserve the user's scope, primary references and protected features. Project instructions and established asset contracts override this skill's fallback choices.
 - Read applicable project guidance and inspect the actual reference pixels. A filename, a summary, or the builder's description is not visual evidence.
+- Resolve how and where the asset will be used at the start of modeling/refinement: ask the required intended-use question with relevant example answers unless the request or accepted brief already explicitly answers it. Record the use contract before deciding detail, hidden surfaces or moving parts; see [intake](references/intake.md).
 - For a new design, conduct the intake before substantive modeling: explicitly request user references/examples and offer initial concept art through Imagegen. Record the user's reference status and concept choice; answering a size question closes only the size question. Reuse explicit prior answers.
 - Distinguish initial art direction from later gap filling. Initial concepts establish a target with the user's chosen review/autonomy mode; supporting generation then resolves specific uncertainties without repeatedly asking the user. Do not automatically generate every possible view.
 - Never treat a generated view as stronger evidence than the supplied reference. Record invented structure as an inference.
@@ -45,10 +46,11 @@ Reuse an existing task brief and ledger. The [working brief](assets/brief-templa
 
 Inspect relevant project instructions, style references, existing assets, texture libraries, target dimensions, conventions and budgets. Record their paths and the origin of each constraint; do not copy one project's style or numerical limits into unrelated work.
 
-Use [intake](references/intake.md). For an incomplete new-design request, normally ask one compact batch of 4–6 meaningful questions covering the missing artistic and functional choices. Do not manufacture redundant questions to meet a count. Fewer or no questions are justified only by recorded answers, including reference status and the initial-art route—not by project style alone or an agent's assumptions. Missing engine information does not block a standalone model.
+Use [intake](references/intake.md). For an incomplete new-design request, normally ask one compact batch of 4–6 meaningful questions covering the missing artistic and functional choices. Do not manufacture redundant questions to meet a count. Fewer or no questions are justified only by recorded answers, including intended use, reference status and the initial-art route—not by project style alone or an agent's assumptions. Missing engine information does not block a standalone model.
 
 Set a compact acceptance contract before expensive work:
 
+- Intended use and context, required interactions/states, visible sides/interiors, and resulting detail/simplification and moving-part requirements.
 - Reference authority, required views and semantic regions to inspect.
 - User reference status, initial Imagegen choice, concept review/autonomy mode and resolved visual target.
 - A quality benchmark and observable reasons the finished asset should meet it.

@@ -6,7 +6,7 @@ Use these when maintaining the skill, not as a ritual for every asset. Test in a
 
 | Input | Expected observable behavior |
 |---|---|
-| “Create this reference-matched industrial prop through Blender MCP”, with dimensions and project budgets | Read project sources, inspect reference pixels, avoid repeated known questions, produce a brief with traced constraints and begin authoring. |
+| “Create this reference-matched industrial prop through Blender MCP”, with dimensions, an explicit intended-use contract and project budgets | Read project sources, inspect reference pixels, avoid repeated known questions, produce a brief with traced constraints and begin authoring. |
 | “It still looks wrong; compare every detail and fix it yourself” | Establish whole-object and semantic-region correspondence; record concrete current→target repairs with tolerances/invariants; render and verify the actual revision. Do not ask whether to continue polishing. |
 | Standalone clean studio product, no engine or project | Keep the clean finish; choose disclosed viewing/production assumptions. Do not add a game, weathering, collision, LODs or an engine requirement by default. |
 | Only one photograph, rear bracket hidden by a wall | Preserve visible construction; infer a consistent rear bracket or generate a targeted study if useful. Mark the rear as inferred. Do not fabricate measured dimensions from the photograph. |
@@ -32,6 +32,11 @@ These cases exercise workflow choices, not keyword presence. Walk through what t
 | Input/state | Required behavior / failure to detect |
 |---|---|
 | New asset requested in one sentence; project already has a style guide | Discover known facts, ask a compact nonredundant intake including condition/priorities, explicitly request examples and offer the initial Imagegen concept route. A size question alone is insufficient. |
+| "Make a building for my game", with project style and dimensions already known | Ask how and where it will be used, with two relevant example answers (background exterior versus explorable interior); do not infer entry or motion requirements from the genre. |
+| "A background building, never entered; fixed distant view", with an otherwise complete brief | Reuse the explicit use answer, record its source, derive a justified visibility/detail plan and avoid a repeated use question or invented interior/door rig. |
+| "Vehicle driven in gameplay and may remain overturned" | Record both driving and overturned states; retain the exposed underside and plan required moving parts/clearance before detailing. A top-view screenshot cannot justify underside removal. |
+| "Weapon in enemy hands and in a rotating close-up menu" | Cover both uses; the nearest menu views drive visible detail across all exposed sides. Ask only about consequential unresolved motion, not whether this is merely a game prop. |
+| User answers the use question only with "for my game" | Keep intended use pending and ask a concrete follow-up about the asset's relevant interaction/exposed states; continue independent preparation, not state-dependent simplification. |
 | User answers only “yes, that size fits” | Record dimensions answered; references and art mode remain pending. Continue independent preparation, not detailed modeling. |
 | User supplies three illustrative photos with features forbidden by the brief | Inspect pixels, assign source roles, extract form/material/condition evidence. Preserve explicit exclusions; do not copy incidental rails, greenery, water or background. Do not request the same files again. |
 | User chooses “make a concept and show me first” | Prepare/generate the concrete board, validate cross-view consistency, show it and wait for visual selection before detailed 3D. Do not ask for permission to perform the already authorized generation. |

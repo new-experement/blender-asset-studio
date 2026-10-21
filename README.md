@@ -6,7 +6,7 @@ This repository contains **two separate adaptations**:
 
 | Environment | Skill |
 |---|---|
-| Codex | [codex/blender-asset-studio](codex/blender-asset-studio) — version **1.3.0**, with instructions, templates, and diagnostic scripts |
+| Codex | [codex/blender-asset-studio](codex/blender-asset-studio) — version **1.3.1**, with instructions, templates, and diagnostic scripts |
 | Claude Code | [claude-code/blender-asset-studio](claude-code/blender-asset-studio) — instructions for Claude Code |
 
 Both versions derive style, dimensions, camera assumptions, and production constraints from the task and the relevant project. Their capabilities differ: the Codex package includes an Imagegen workflow, while the Claude version describes its own available tools. Install the adaptation for your environment.
